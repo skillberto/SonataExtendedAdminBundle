@@ -1,0 +1,3 @@
+services:
+    skillberto.admin:
+      class: Skillberto\AdminBundle\Controller\AdminController
