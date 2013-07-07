@@ -15,7 +15,7 @@
         "symfony/symfony": ">=2.1",
         "sonata-project/block-bundle": "2.2.*@dev",
         "sonata-project/cache-bundle": "2.1.*@dev",
-        "sonata-project/admin-bundle": "2.2.*@dev",
+        "sonata-project/admin-bundle": "2.2.*@dev"
     },
     "suggest": {
         "skillberto/menu-bundle": "dev-master"
