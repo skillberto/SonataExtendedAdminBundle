@@ -1,0 +1,32 @@
+{
+    "name":         "skillberto/admin-bundle",
+    "description":  "This bundle have some extra function for SonataAdminBundle",
+    "keywords":     ["sonata-admin","extra"],
+    "type":         "symfony-bundle",
+    "license":      "MIT",
+    "authors":      [
+        {
+            "name":     "Heiszler Norbert",
+            "email":    "skillbertoo@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": ">=2.1",
+        "sonata-project/block-bundle": "2.2.*@dev",
+        "sonata-project/cache-bundle": "2.1.*@dev",
+        "sonata-project/admin-bundle": "2.2.*@dev",
+    },
+    "suggest": {
+        "skillberto/menu-bundle": "dev-master"
+    },
+    "autoload":     {
+        "psr-0": { "Skillberto\\AdminBundle": "" }
+    },
+    "target-dir": "Skillberto/AdminBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.2.x-dev"
+        }
+    }
+}
