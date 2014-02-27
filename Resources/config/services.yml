@@ -1,3 +1,4 @@
 services:
-    skillberto.admin:
-      class: Skillberto\AdminBundle\Controller\AdminController
+    skillberto.admin.controller:
+        class: Skillberto\AdminBundle\Controller\AdminController
+      
