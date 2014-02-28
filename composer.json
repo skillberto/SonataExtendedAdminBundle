@@ -13,9 +13,9 @@
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": ">=2.1",
-        "sonata-project/block-bundle": "2.2.*@dev",
-        "sonata-project/cache-bundle": "2.1.*@dev",
-        "sonata-project/admin-bundle": "2.2.*@dev"
+        "sonata-project/block-bundle": "2.2.x-dev",
+        "sonata-project/cache-bundle": "1.x-dev",
+        "sonata-project/admin-bundle": "2.3.x-dev"
     },
     "suggest": {
         "skillberto/menu-bundle": "2.2.x-dev"
@@ -26,7 +26,7 @@
     "target-dir": "Skillberto/AdminBundle",
     "extra": {
         "branch-alias": {
-            "dev-master": "2.2.x-dev"
+            "dev-master": "2.3.x-dev"
         }
     }
 }
