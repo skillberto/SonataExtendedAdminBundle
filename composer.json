@@ -13,12 +13,10 @@
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": ">=2.1",
-        "sonata-project/block-bundle": "2.2.x-dev",
-        "sonata-project/cache-bundle": "1.x-dev",
         "sonata-project/admin-bundle": "2.2.x-dev"
     },
     "suggest": {
-        "skillberto/menu-bundle": "2.2.*@dev"
+        "skillberto/menu-bundle": "2.2.x-dev"
     },
     "autoload":     {
         "psr-0": { "Skillberto\\AdminBundle": "" }
