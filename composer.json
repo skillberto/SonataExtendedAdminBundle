@@ -18,7 +18,7 @@
         "sonata-project/admin-bundle": "2.2.*@dev"
     },
     "suggest": {
-        "skillberto/menu-bundle": "dev-master"
+        "skillberto/menu-bundle": "2.2.x-dev"
     },
     "autoload":     {
         "psr-0": { "Skillberto\\AdminBundle": "" }
