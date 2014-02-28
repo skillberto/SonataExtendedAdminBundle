@@ -146,9 +146,13 @@ abstract class Base
      * 
      * @param \DateTime|null $createdAt
      */
-    public function setCreatedAt(\DateTime $createdAt = null)
+    public function setCreatedAt($createdAt = null)
     {
-        $this->createdAt = empty($createdAt) ? $createdAt : new \DateTime("now");;
+        if (!($createdAt instanceof \DateTime)) {
+            $createdAt = new \DateTime("now");
+        }
+        
+        $this->createdAt = $createdAt;
         
         return $this;
     }
@@ -170,9 +174,13 @@ abstract class Base
      * 
      * @param \DateTime|null $updatedAt
      */
-    public function setUpdatedAt(\DateTime $updatedAt = null)
+    public function setUpdatedAt($updatedAt = null)
     {
-        $this->updatedAt = empty($updatedAt) ? $updatedAt : new \DateTime("now");
+        if (!($updatedAt instanceof \DateTime)) {
+            $updatedAt = new \DateTime("now");
+        }
+    
+        $this->updatedAt = $updatedAt;
         
         return $this;
     }
