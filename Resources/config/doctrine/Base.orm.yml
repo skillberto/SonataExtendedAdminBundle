@@ -1,0 +1,23 @@
+Skillberto\AdminBundle\Entity\Base:
+  type: mappedSuperclass
+  repositoryClass: Skillberto\AdminBundle\Entity\Repository\BaseRepository
+  id:
+    id:
+      type: integer
+      column: id
+      generator:
+        strategy: AUTO
+  fields:
+    locale:
+      type: string
+    active:
+      type: boolean
+    position:
+      type: integer
+    createdAt:
+      type: datetime
+    updatedAt:
+      type: datetime
+  lifecycleCallbacks:
+    prePersist: [ createdAt ]
+    postPersist: [ updateAt ]
