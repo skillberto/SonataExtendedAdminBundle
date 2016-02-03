@@ -1,6 +1,6 @@
 <?php
 
-namespace Skillberto\AdminBundle\Controller;
+namespace Skillberto\SonataExtendedAdminBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Skillberto\AdminBundle\Command;
+namespace Skillberto\SonataExtendedAdminBundle\Command;
 
 
 use Sensio\Bundle\GeneratorBundle\Command\Helper\DialogHelper;

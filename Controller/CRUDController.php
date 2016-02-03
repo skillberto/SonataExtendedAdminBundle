@@ -1,6 +1,6 @@
 <?php
 
-namespace Skillberto\AdminBundle\Controller;
+namespace Skillberto\SonataExtendedAdminBundle\Controller;
 
 use Sonata\AdminBundle\Controller\CRUDController as Controller;
 use Symfony\Component\HttpFoundation\Response;
@@ -31,22 +31,6 @@ class CRUDController extends Controller
         $this->admin->update($object);        
         
         return new RedirectResponse($this->admin->generateUrl('list'));
-    }
-    
-    public function sortAction()
-    {        
-        if ($this->getRestMethod() == 'POST' && !empty($_POST['order'])) {
-            foreach($_POST['order'] as $position => $id) {
-                $object = $this->getObject($id);
-                
-                if (method_exists($object, 'setPosition')) {
-                    $object->setPosition($position+1);
-                    $this->admin->update($object);
-                }
-            }
-        }
-        
-        return new Response();
     }
     
     protected function getObject($objectId = NULL)

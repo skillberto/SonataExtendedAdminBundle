@@ -1,6 +1,6 @@
 <?php
 
-namespace Skillberto\AdminBundle\Entity;
+namespace Skillberto\SonataExtendedAdminBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints\DateTime;

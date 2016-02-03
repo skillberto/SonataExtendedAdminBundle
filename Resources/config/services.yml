@@ -1,4 +1,4 @@
 services:
-    skillberto.admin.controller:
-        class: Skillberto\AdminBundle\Controller\AdminController
+    skillberto.sonataextendedadmin.controller:
+        class: Skillberto\SonataExtendedAdminBundle\Controller\AdminController
       

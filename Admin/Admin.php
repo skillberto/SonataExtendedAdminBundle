@@ -1,6 +1,6 @@
 <?php
 
-namespace Skillberto\AdminBundle\Admin;
+namespace Skillberto\SonataExtendedAdminBundle\Admin;
 
 use Sonata\AdminBundle\Admin\Admin as BaseAdmin;
 use Sonata\AdminBundle\Route\RouteCollection;
@@ -43,29 +43,7 @@ class Admin extends BaseAdmin
         
         return $valid;
     }
-    
-    public function __construct($code, $class, $baseControllerName, EntityManager $em) {
-        $this->em = $em;
-        
-        parent::__construct($code, $class, $baseControllerName);
-    }
 
-        /**
-     * Set entity default settings
-     * 
-     * @return object
-     */
-    public function getNewInstance()
-    {        
-        $instance = parent::getNewInstance();
-                  
-        //set position
-        if (method_exists($instance, 'setPosition')) {
-            $instance->setPosition(($this->getMaxPosition($this->getClass()))+1);
-        }        
-                
-        return $instance;
-    }
     
     public function getTemplateActions($actions = array())
     {
@@ -85,16 +63,5 @@ class Admin extends BaseAdmin
     protected function configureRoutes(RouteCollection $collection)
     {
         $collection->add('activate', $this->getRouterIdParameter().'/activate');
-        $collection->add('sort', 'sort');
-    }
-    
-    protected function getMaxPosition($entity)
-    {
-        $query = $this->em->createQuery('SELECT MAX(m.position) p FROM '.$entity.' m');
-        try {
-            return $query->getSingleScalarResult();
-        } catch( NoResultException $e) {
-            return 0;
-        }
     }
 }

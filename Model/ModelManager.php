@@ -1,6 +1,6 @@
 <?php
 
-namespace Skillberto\AdminBundle\Model;
+namespace Skillberto\SonataExtendedAdminBundle\Model;
 
 use Sonata\AdminBundle\Model\ModelManagerInterface;
 use Sonata\AdminBundle\Admin\FieldDescriptionInterface;
