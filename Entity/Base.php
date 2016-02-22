@@ -18,17 +18,7 @@ class Base
     /**
      * @var string
      */
-    protected $locale;
-
-    /**
-     * @var string
-     */
     protected $active;
-
-    /**
-     * @var string
-     */
-    protected $position;
 
     /**
      * @var \DateTime
@@ -52,29 +42,6 @@ class Base
     }
 
     /**
-     * Set locale
-     *
-     * @param string $locale
-     * @return Base
-     */
-    public function setLocale($locale)
-    {
-        $this->locale = $locale;
-
-        return $this;
-    }
-
-    /**
-     * Get locale
-     *
-     * @return string 
-     */
-    public function getLocale()
-    {
-        return $this->locale;
-    }
-
-    /**
      * Set active
      *
      * @param string $active
@@ -95,29 +62,6 @@ class Base
     public function getActive()
     {
         return $this->active;
-    }
-
-    /**
-     * Set position
-     *
-     * @param string $position
-     * @return Base
-     */
-    public function setPosition($position)
-    {
-        $this->position = $position;
-
-        return $this;
-    }
-
-    /**
-     * Get position
-     *
-     * @return string 
-     */
-    public function getPosition()
-    {
-        return $this->position;
     }
 
     /**
