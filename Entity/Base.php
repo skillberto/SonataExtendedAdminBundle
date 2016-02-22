@@ -2,19 +2,11 @@
 
 namespace Skillberto\SonataExtendedAdminBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints\DateTime;
-
 /**
  * Base
  */
-class Base
+abstract class Base
 {
-    /**
-     * @var integer
-     */
-    protected $id;
-
     /**
      * @var string
      */
@@ -29,18 +21,7 @@ class Base
      * @var \DateTime
      */
     protected $updatedAt;
-
-
-    /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
+    
     /**
      * Set active
      *
@@ -115,7 +96,7 @@ class Base
      */
     public function createdAt()
     {
-        $this->setCreatedAt( new DateTime("now") );
+        $this->setCreatedAt( new \DateTime("now") );
     }
 
     /**
@@ -123,7 +104,7 @@ class Base
      */
     public function updateAt()
     {
-        $this->setUpdatedAt( new DateTime("now") );
+        $this->setUpdatedAt( new \DateTime("now") );
     }
 
 }
