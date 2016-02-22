@@ -1,12 +1,6 @@
 Skillberto\SonataExtendedAdminBundle\Entity\Base:
   type: mappedSuperclass
   repositoryClass: Skillberto\SonataExtendedAdminBundle\Entity\Repository\BaseRepository
-  id:
-    id:
-      type: integer
-      column: id
-      generator:
-        strategy: AUTO
   fields:
     active:
       type: boolean

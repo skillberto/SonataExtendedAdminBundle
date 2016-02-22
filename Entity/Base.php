@@ -21,7 +21,7 @@ abstract class Base
      * @var \DateTime
      */
     protected $updatedAt;
-    
+
     /**
      * Set active
      *
