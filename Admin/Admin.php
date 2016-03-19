@@ -8,13 +8,13 @@ use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\NoResultException;
 
 class Admin extends BaseAdmin
-{    
+{
     protected
-        $translationDomain = "SkillbertoAdminBundle",
+        $translationDomain = "SkillbertoSonataExtendedAdminBundle",
         $actions = array (
             'show'      => array(),
             'edit'      => array(),
-            'activate'  => array('template' => 'SkillbertoAdminBundle:Admin:list__action_activate.html.twig'),
+            'activate'  => array('template' => 'SkillbertoSonataExtendedAdminBundle:Admin:list__action_activate.html.twig'),
             'delete'    => array()
         ),
         $datagridValues = array(
@@ -23,43 +23,43 @@ class Admin extends BaseAdmin
             '_sort_by' => 'position' // name of the ordered field (default = the model id field, if any) the '_sort_by' key can be of the form 'mySubModel.mySubSubModel.myField'.
         ),
         $em;
-    
+
     protected static
         $RemovedFromRoute = array(
             "fos_",
             "admin_",
             "sonata_"
         );
-    
+
     public static function validateRoute($name)
     {
         $valid = TRUE;
-        
+
         foreach (self::$RemovedFromRoute as $pattern ) {
             if (strpos($name, $pattern) !== FALSE || stripos($name, "_") === 0 ) {
                 $valid = FALSE;
             }
         }
-        
+
         return $valid;
     }
 
-    
+
     public function getTemplateActions($actions = array())
     {
         if (empty($actions)) {
             return $this->actions;
         }
-        
+
         $sort = array();
-                
+
         foreach ($actions as $action) {
             $sort[$action] = $this->actions[$action];
         }
-        
+
         return $sort;
     }
-    
+
     protected function configureRoutes(RouteCollection $collection)
     {
         $collection->add('activate', $this->getRouterIdParameter().'/activate');
