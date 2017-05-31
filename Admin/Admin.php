@@ -2,12 +2,12 @@
 
 namespace Skillberto\SonataExtendedAdminBundle\Admin;
 
-use Sonata\AdminBundle\Admin\Admin as BaseAdmin;
+use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Route\RouteCollection;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\NoResultException;
 
-class Admin extends BaseAdmin
+class Admin extends AbstractAdmin
 {
     protected
         $translationDomain = "SkillbertoSonataExtendedAdminBundle",

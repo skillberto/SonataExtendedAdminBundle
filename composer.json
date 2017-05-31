@@ -11,9 +11,9 @@
         }
     ],
     "require": {
-        "php": ">=5.3.3",
-        "sonata-project/admin-bundle": "2.3.*",
-        "sonata-project/doctrine-orm-admin-bundle": "2.3.*"
+        "php": ">=7.0",
+        "sonata-project/admin-bundle": "~3.1",
+        "sonata-project/doctrine-orm-admin-bundle": "~3.1"
     },
     "suggest": {
         "skillberto/sonata-page-menu-bundle": "Menu handling with SonataPageBundle and SonataAdminBundle"
@@ -23,7 +23,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.4.x-dev"
+            "dev-master": "3.0-dev"
         }
     }
 }
